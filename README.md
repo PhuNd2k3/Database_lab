@@ -1,2 +1,4 @@
 # ERD_convert
-ERD convert
+ERD convert\n
+Bước 1:
+
