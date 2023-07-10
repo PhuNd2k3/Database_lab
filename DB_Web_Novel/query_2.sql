@@ -201,7 +201,7 @@ SELECT genre_name, COUNT(*) as total_top_favor
 FROM genre join favorite_genre on genre_id = favor_genre_id
 WHERE ord_genre = 1
 GROUP BY genre_id
-ORDER BY total_top_1_ord DESC;
+ORDER BY total_top_favor DESC;
 
 -- 14. Sap xep cac the loai theo tieu chi duoc xep ua thich thu 1 nhieu nhat (ord =1)
 SELECT genre_name, COUNT(*) as total_top_1_ord
