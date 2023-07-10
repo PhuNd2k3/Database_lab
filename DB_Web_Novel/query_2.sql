@@ -197,7 +197,7 @@ FROM users
 WHERE phone_number IS NOT NULL;
 
 -- 13. Truyen duoc xuat hien trong danh sach ua thich nhieu nhat (ord 1 -> 5 deu duoc)
-SELECT genre_name, COUNT(*) as total_top_1_ord
+SELECT genre_name, COUNT(*) as total_top_favor
 FROM genre join favorite_genre on genre_id = favor_genre_id
 WHERE ord_genre = 1
 GROUP BY genre_id
