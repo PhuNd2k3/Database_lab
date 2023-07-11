@@ -199,7 +199,6 @@ WHERE phone_number IS NOT NULL;
 -- 13. Truyen duoc xuat hien trong danh sach ua thich nhieu nhat (ord 1 -> 5 deu duoc)
 SELECT genre_name, COUNT(*) as total_top_favor
 FROM genre join favorite_genre on genre_id = favor_genre_id
-WHERE ord_genre = 1
 GROUP BY genre_id
 ORDER BY total_top_favor DESC;
 
@@ -260,7 +259,7 @@ JOIN with_genre ON novel_info.novel_id = with_genre.novel_id
 JOIN genre ON with_genre.genre_id = genre.genre_id
 WHERE lower(genre.genre_name) = lower('Action') AND novel_info.avg_star > 4.0;
 
--- 22. Tong so truyen co chap moi duoc dang trong nam nay
+-- 22. Tong so chap moi duoc dang trong nam nay
 SELECT COUNT(*) AS total_novels_this_year
 FROM novel
 JOIN content ON novel.novel_id = content.novel_id
